@@ -1,4 +1,4 @@
-"""project_1.py: 
+"""1project_1.py: 
 first project for Engeto Online Python Academy
 
 Author: Michaela Papadimitriu Ludvikova
