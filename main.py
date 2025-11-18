@@ -12,7 +12,7 @@ users = {
     "bob": "123",
     "ann": "pass123",
     "mike": "password123",
-    "liz": "pass123"
+    "liz": "pass123",
 }
 
 TEXTS = [
@@ -40,7 +40,7 @@ are found in multiple limestone layers, which lie some
 represent several varieties of perch, as well as
 other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
-garpike and stingray are also present.'''
+garpike and stingray are also present.''',
 ]
 
 username = input("username: ")
@@ -50,10 +50,11 @@ if users.get(username) != password:
     print("Unregistered user, terminating the program..")
     quit()
 
-print("-" * 40)
+SEPARATOR = ("-" * 40)
+print(SEPARATOR)
 print(f"Welcome to the app, {username}")
 print("We have 3 texts to be analyzed.")
-print("-" * 40)
+print(SEPARATOR)
 
 text_number = input(
     f"Enter a number btw. 1 and {len(TEXTS)} to select: "
@@ -68,13 +69,17 @@ if not 1 <= text_number <= len(TEXTS):
     print("The number is out of range, terminating program..")
     quit()
 
-print("-" * 40)
+print(SEPARATOR)
+
+# subtract 1 because list indexes start at 0
 text = TEXTS[text_number - 1]
+
 words = [
     word.strip(string.punctuation)
     for word in text.split()
 ]
 
+# Counters
 titlecase_count = 0
 uppercase_count = 0
 lowercase_count = 0
@@ -83,12 +88,16 @@ sum_of_numbers = 0
 
 word_count = len(words)
 for word in words:
+    # Check for Titlecase words (first letter capitalized)
     if word.istitle():
         titlecase_count += 1
+    # Check for fully uppercase words
     elif word.isupper():
         uppercase_count += 1
+    # Check for fully lowercase words
     elif word.islower():
         lowercase_count += 1
+    # Check if the word is numeric
     if word.isdigit():
         numeric_count += 1
         sum_of_numbers += int(word)
@@ -99,12 +108,12 @@ print(f"There are {uppercase_count} uppercase words.")
 print(f"There are {lowercase_count} lowercase words.")
 print(f"There are {numeric_count} numeric strings.")
 print(f"The sum of all the numbers {sum_of_numbers}")
-print("-" * 40)
+print(SEPARATOR)
 
 lengths = Counter(len(word) for word in words)
 
 print(f"{'LEN':>3}| {'OCCURRENCES':^18} |{'NR.':>3}")
-print("-" * 40)
+print(SEPARATOR)
 
 for length in sorted(lengths):
     print(
