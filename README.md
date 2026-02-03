@@ -39,10 +39,10 @@ python main.py
 
 ## Registered Users
 
-| Username     | Password      |
-| ---------------------------- |
-| bob	       |  123          |
-| ann	       |  pass123      |
-| mike	       |  password123  |
-| liz	       |  pass123      |
+| Username     | Password     |
+| :---         | :---         |
+| bob	       | 123          |
+| ann	       | pass123      |
+| mike	       | password123  |
+| liz	       | pass123      |
 
