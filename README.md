@@ -1,8 +1,8 @@
 # Text Analyzer Project
 
-**Author:** Michaela Papadimitriu Ludvikova
-**Email:** mludvik2@yahoo.com
-**Course:** Engeto Online Python Academy — Project 1
+**Author:** Michaela Papadimitriu Ludvikova  
+**Email:** mludvik2@yahoo.com  
+**Course:** Engeto Online Python Academy — Project 1  
 
 ## Project Overview
 
